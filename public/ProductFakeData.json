@@ -1,0 +1,44 @@
+[
+  {
+    "id": 1,
+    "title": "JF Barbed Wire- 270 GSM",
+    "price": 4995.00,
+    "description": "Heavy-duty galvanized barbed wire with 270 GSM coating, ideal for farm fencing and agricultural boundaries.",
+    "image": "https://i.ibb.co/v66McPwP/image-3.png"
+  },
+  {
+    "id": 2,
+    "title": "FGC RustFree Fencing Poles",
+    "price": "499.00 – 1589.00",
+    "description": "Rust-resistant fencing wire with 12x12 gauge, suitable for livestock farms and security fencing.",
+    "image": "https://i.ibb.co/LDnCTFvZ/image-4.png"
+  },
+  {
+    "id": 3,
+    "title": "GI Poultry Mesh",
+    "price": 10750.00,
+    "description": "Durable zinc-coated wire for long-lasting outdoor use in harsh environments.",
+    "image": "https://i.ibb.co/5WLxMD4V/image-5.png"
+  },
+  {
+    "id": 4,
+    "title": "JF Bluelink Mesh",
+    "price": 6362.50,
+    "description": "1kg roll of double-stranded barbed wire for small perimeter fencing needs.",
+    "image": "https://i.ibb.co/Tqbsk0d1/image-6.png"
+  },
+  { 
+    "id": 5,
+    "title": "High Tensile Wire-250M Coil",
+    "price": 190.75,
+    "description": "250-meter coil of high tensile wire perfect for high-security farms.",
+    "image": "https://fakestoreapi.com/img/barbed-wire-5.jpg"
+  },
+  {
+    "id": 6,
+    "title": "Agricultural Fencing Wire",
+    "price": 150.00,
+    "description": "Weatherproof wire with thick 300 GSM coating for long-term agricultural use.",
+    "image": "https://fakestoreapi.com/img/barbed-wire-6.jpg"
+  }
+]
