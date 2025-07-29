@@ -1,12 +1,29 @@
-# React + Vite
+🛍️ ShopSphere
+ShopSphere is a minimalist and responsive single-page e-commerce application built using React JS, Tailwind CSS, and Vite. It showcases a modern shopping cart flow with route management and smooth animations.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+🔗 Live Demo
+Deployed on Vercel: [https://js-privezy-grass-wall-task.vercel.app/]
 
-Currently, two official plugins are available:
+📋 Features
+Product list 
+Animated UI with framer-motion
+Responsive design with Tailwind CSS
+Route navigation using react-router-dom
+🚀 Tech Stack
+Frontend Framework: React 19
+Build Tool: Vite
+Styling: Tailwind CSS
+Routing: React Router v7
+Icons: Lucide & React Icons
+Animations: Framer Motion
+🛠 How to Run Locally
+Clone the repository
+git clone https://github.com/imamhossain-bd/js-privezy-grass-wall-task.git
+cd shopsphere
+npm install
+npm run dev
+Open in browser
+http://localhost:5173
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Project Structure (Simplified)
+ShopSphere/ ├── public/ ├── src/ │ ├── components/ │ ├── context/ │ ├── pages/ │ └── main.tsx ├── index.html ├── tailwind.config.js ├── package.json └── vite.config.js
