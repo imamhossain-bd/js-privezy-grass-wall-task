@@ -1,0 +1,44 @@
+[
+  {
+    "id": 1,
+    "title": "Antiq Fence",
+    "price": "₹10,024.00 – ₹14,984.82",
+    "description": "Classic Antiq Fence perfect for gardens, pathways, and front yards with a vintage look.",
+    "image": "https://i.ibb.co/DH4xvnty/image.png"
+  },
+  {
+    "id": 2,
+    "title": "JF Australian Trellis",
+    "price": "₹6,962.00",
+    "description": "Modern white JF Australian Trellis ideal for balconies, rooftops, and partition walls.",
+    "image": "https://i.ibb.co/wZ5GnRCw/image-1.png"
+  },
+  {
+    "id": 3,
+    "title": "JF Polyhex Mesh",
+    "price": "₹4,050.00 – ₹10,770.00",
+    "description": "UV-stabilized Polyhex Mesh rolls in green, black, and silver for fencing and decor.",
+    "image": "https://i.ibb.co/TDFzT6bX/image-2.png"
+  },
+  {
+    "id": 4,
+    "title": "JF Privezy Grass Wall",
+    "price": "₹1,646.10 – ₹18,284.10",
+    "description": "Artificial grass panels in varying heights for vertical landscaping and privacy walls.",
+    "image": "https://i.ibb.co/Kc0rCKpW/image-3.png"
+  },
+  {
+    "id": 5,
+    "title": "Decorative Garden Panel",
+    "price": "₹8,500.00",
+    "description": "Laser-cut garden panel for outdoor partition and decorative landscaping.",
+    "image": "https://i.ibb.co/DH4xvnty/image.png"
+  },
+  {
+    "id": 6,
+    "title": "Plastic Garden Edging",
+    "price": "₹1,250.00 – ₹2,500.00",
+    "description": "Flexible plastic landscape edging for neat lawn borders and flowerbeds.",
+    "image": "https://i.ibb.co/TDFzT6bX/image-2.png"
+  }
+]

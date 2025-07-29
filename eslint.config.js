@@ -13,6 +13,12 @@ export default defineConfig([
       reactHooks.configs['recommended-latest'],
       reactRefresh.configs.vite,
     ],
+    "env": {
+    "es6": true,
+    "node": true,
+    "browser": true,
+    "amd": true
+  },
     languageOptions: {
       ecmaVersion: 2020,
       globals: globals.browser,
