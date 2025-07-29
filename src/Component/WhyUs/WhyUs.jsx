@@ -21,7 +21,7 @@ const WhyUs = () => {
                     <div className="absolute inset-0 bg-gradient-to-br from-blue-200 to-blue-300 opacity-0 transition-opacity duration-300 rounded-xl"></div>
                     <div className="relative z-10">
                         <div className="mb-6">
-                            <img src="/public/Group 480.png" alt="Innovation Icon" className="h-12 w-12 object-contain"/>
+                            <img src="https://i.ibb.co/DD5m0CS1/Group-480.png" alt="Innovation Icon" className="h-12 w-12 object-contain"/>
                         </div>
                         <h3 className="text-2xl font-semibold text-gray-800 mb-4 transition-colors duration-300">
                             Unmatched Durability with Corrosion-Free Technology
@@ -43,7 +43,7 @@ const WhyUs = () => {
                     <div className="relative z-10">
                         {/* Icon */}
                         <div className="mb-6">
-                            <img src="/public/Frame-2.png" alt="Innovation Icon" className="h-12 w-12 object-contain"/>
+                            <img src="https://i.ibb.co/mrR3cLcG/Frame-2.png" alt="Innovation Icon" className="h-12 w-12 object-contain"/>
                         </div>
                         {/* Title */}
                         <h3 className="text-2xl font-semibold text-white mb-4">
@@ -63,7 +63,7 @@ const WhyUs = () => {
                     <div className="relative z-10">
                         {/* Icon */}
                         <div className="mb-6">
-                            <img src="/public/Group 484.png" alt="Innovation Icon" className="h-12 w-12 object-contain"/>
+                            <img src="https://i.ibb.co/S2xpCfM/Group-484.png" alt="Innovation Icon" className="h-12 w-12 object-contain"/>
                         </div>
                         {/* Title */}
                         <h3 className="text-2xl font-semibold text-gray-800 group-hover:text-gray-900 mb-4 transition-colors duration-300">

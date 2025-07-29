@@ -73,7 +73,7 @@ const Navbar = () => {
                     {/* Logo */}
                     <div className="logo flex-shrink-0">
                         <a href="/">
-                            <img className='w-[45px] h-[55px] sm:w-[50px] sm:h-[60px] lg:w-[55px] lg:h-[65px]' src="/public/Frame.png" alt="logo" />
+                            <img className='w-[45px] h-[55px] sm:w-[50px] sm:h-[60px] lg:w-[55px] lg:h-[65px]' src="https://i.ibb.co/d05QFPfT/Frame.png" alt="logo" />
                         </a>
                     </div>
 
