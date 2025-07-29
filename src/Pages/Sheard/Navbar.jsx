@@ -6,8 +6,9 @@ import { NavLink } from 'react-router-dom';
 const Navbar = () => {
     const [hidden, setHidden] = useState(false);
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-    const [searchPopupOpen, setSearchPopupOpen] = useState(false); // State for search popup visibility
-    const [loginPopupOpen, setLoginPopupOpen] = useState(false); // State for login popup visibility
+    const [searchPopupOpen, setSearchPopupOpen] = useState(false);
+    const [loginPopupOpen, setLoginPopupOpen] = useState(false);
+    const [cartPopupOpen, setCartPopupOpen] = useState(false); // State for cart popup visibility
     let lastScroll = 0;
 
     useEffect(() => {
@@ -26,31 +27,39 @@ const Navbar = () => {
         }
     }, []);
 
-    // Function to toggle search popup visibility
     const toggleSearchPopup = () => {
         setSearchPopupOpen(!searchPopupOpen);
-        // Close mobile menu and login popup if search popup opens
         if (!searchPopupOpen) {
             setMobileMenuOpen(false);
+            setLoginPopupOpen(false);
+            setCartPopupOpen(false); // Close cart popup
+        }
+    };
+
+    const toggleLoginPopup = () => {
+        setLoginPopupOpen(!loginPopupOpen);
+        if (!loginPopupOpen) {
+            setMobileMenuOpen(false);
+            setSearchPopupOpen(false);
+            setCartPopupOpen(false); // Close cart popup
+        }
+    };
+
+    // Function to toggle cart popup visibility
+    const toggleCartPopup = () => {
+        setCartPopupOpen(!cartPopupOpen);
+        if (!cartPopupOpen) {
+            setMobileMenuOpen(false);
+            setSearchPopupOpen(false);
             setLoginPopupOpen(false);
         }
     };
 
-    // Function to toggle login popup visibility
-    const toggleLoginPopup = () => {
-        setLoginPopupOpen(!loginPopupOpen);
-        // Close mobile menu and search popup if login popup opens
-        if (!loginPopupOpen) {
-            setMobileMenuOpen(false);
-            setSearchPopupOpen(false);
-        }
-    };
-
     const navLinks = <>
-        <li className='font-bold text-xl'><NavLink to={'/'} onClick={() => { setMobileMenuOpen(false); setSearchPopupOpen(false); setLoginPopupOpen(false); }}>Home</NavLink></li>
-        <li className='font-bold text-xl'><NavLink to={'/shop'} onClick={() => { setMobileMenuOpen(false); setSearchPopupOpen(false); setLoginPopupOpen(false); }}>Shop</NavLink></li>
-        <li className='font-bold text-xl'><NavLink to={'/blog'} onClick={() => { setMobileMenuOpen(false); setSearchPopupOpen(false); setLoginPopupOpen(false); }}>Blog</NavLink></li>
-        <li className='font-bold text-xl'><NavLink to={'/contact'} onClick={() => { setMobileMenuOpen(false); setSearchPopupOpen(false); setLoginPopupOpen(false); }}>Contact</NavLink></li>
+        <li className='font-bold text-xl'><NavLink to={'/'} onClick={() => { setMobileMenuOpen(false); setSearchPopupOpen(false); setLoginPopupOpen(false); setCartPopupOpen(false); }}>Home</NavLink></li>
+        <li className='font-bold text-xl'><NavLink to={'/shop'} onClick={() => { setMobileMenuOpen(false); setSearchPopupOpen(false); setLoginPopupOpen(false); setCartPopupOpen(false); }}>Shop</NavLink></li>
+        <li className='font-bold text-xl'><NavLink to={'/blog'} onClick={() => { setMobileMenuOpen(false); setSearchPopupOpen(false); setLoginPopupOpen(false); setCartPopupOpen(false); }}>Blog</NavLink></li>
+        <li className='font-bold text-xl'><NavLink to={'/contact'} onClick={() => { setMobileMenuOpen(false); setSearchPopupOpen(false); setLoginPopupOpen(false); setCartPopupOpen(false); }}>Contact</NavLink></li>
     </>
 
     return (
@@ -90,15 +99,22 @@ const Navbar = () => {
                                     <FontAwesomeIcon icon={faMagnifyingGlass} />
                                 </button>
                             </li>
-                            <li className='text-xl'><NavLink to={'/cart'}><FontAwesomeIcon icon={faShoppingCart} /></NavLink></li>
+                            <li className='text-xl'>
+                                <button onClick={toggleCartPopup}> {/* Cart button now toggles popup */}
+                                    <FontAwesomeIcon icon={faShoppingCart} />
+                                </button>
+                            </li>
                         </ul>
                     </div>
 
+                    {/* Mobile Right Icons */}
                     <div className='md:hidden flex items-center space-x-3'>
                         <button onClick={toggleSearchPopup}>
                             <FontAwesomeIcon icon={faMagnifyingGlass} />
                         </button>
-                        <NavLink to={'/cart'}><FontAwesomeIcon icon={faShoppingCart} /></NavLink>
+                        <button onClick={toggleCartPopup}> {/* Cart button now toggles popup */}
+                            <FontAwesomeIcon icon={faShoppingCart} />
+                        </button>
                     </div>
                 </div>
 
@@ -181,6 +197,52 @@ const Navbar = () => {
                     </div>
                 </div>
             )}
+
+            {/* Cart Popup */}
+            <div className={`fixed top-0 right-0 h-full w-full max-w-sm bg-white shadow-lg z-[70] transform transition-transform duration-300 ease-in-out ${cartPopupOpen ? 'translate-x-0' : 'translate-x-full'}`}>
+                <div className="flex justify-between items-center p-6 border-b border-gray-200">
+                    <h3 className="text-2xl font-bold text-gray-800">Your Cart</h3>
+                    <button onClick={toggleCartPopup} className="text-gray-500 hover:text-gray-800 transition-colors duration-200">
+                        <FontAwesomeIcon icon={faTimes} className="text-2xl" />
+                    </button>
+                </div>
+                <div className="p-6 overflow-y-auto h-[calc(100%-160px)]"> {/* Adjust height based on header/footer */}
+                    {/* Placeholder Cart Items */}
+                    <div className="flex items-center mb-4 pb-4 border-b border-gray-100 last:border-b-0 last:pb-0">
+                        <img src="https://placehold.co/80x80/E0E0E0/333333?text=Item" alt="Cart Item" className="w-20 h-20 object-cover rounded-md mr-4" />
+                        <div className="flex-1">
+                            <h4 className="text-lg font-semibold text-gray-800">Product Item 1</h4>
+                            <p className="text-gray-600 text-sm">Quantity: 1</p>
+                            <p className="text-blue-600 font-bold">$49.99</p>
+                        </div>
+                        <button className="text-red-500 hover:text-red-700 transition-colors duration-200">
+                            <FontAwesomeIcon icon={faTimes} />
+                        </button>
+                    </div>
+                    <div className="flex items-center mb-4 pb-4 border-b border-gray-100 last:border-b-0 last:pb-0">
+                        <img src="https://placehold.co/80x80/D0D0D0/444444?text=Item" alt="Cart Item" className="w-20 h-20 object-cover rounded-md mr-4" />
+                        <div className="flex-1">
+                            <h4 className="text-lg font-semibold text-gray-800">Product Item 2</h4>
+                            <p className="text-gray-600 text-sm">Quantity: 2</p>
+                            <p className="text-blue-600 font-bold">$25.00</p>
+                        </div>
+                        <button className="text-red-500 hover:text-red-700 transition-colors duration-200">
+                            <FontAwesomeIcon icon={faTimes} />
+                        </button>
+                    </div>
+                    {/* Add more cart items as needed */}
+                    <p className="text-center text-gray-500 mt-8">Your cart is empty.</p> {/* Show if cart is empty */}
+                </div>
+                <div className="p-6 border-t border-gray-200 mt-[-60px]">
+                    <div className="flex justify-between items-center mb-4">
+                        <span className="text-xl font-bold text-gray-800">Total:</span>
+                        <span className="text-xl font-bold text-blue-600">$99.99</span>
+                    </div>
+                    <button className="w-full py-3 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition-colors duration-300">
+                        Proceed to Checkout
+                    </button>
+                </div>
+            </div>
 
             {/* Tailwind CSS custom animation for scale-in */}
             <style>
