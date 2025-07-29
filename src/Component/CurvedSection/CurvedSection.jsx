@@ -14,19 +14,19 @@ const CurvedSection = () => {
                         {Array(2).fill(0).map((_, i) => (
                             <React.Fragment key={i}>
                                 <div className="flex items-center space-x-2 flex-shrink-0">
-                                    <img src="/public/Group 449.png" alt="Icon" className="h-5 w-5 object-contain" />
+                                    <img src="https://i.ibb.co/mWZJT2m/Group-449.png" alt="Icon" className="h-5 w-5 object-contain" />
                                     <span className="text-blue-900 font-semibold text-lg whitespace-nowrap">Quality Product</span>
                                 </div>
                                 <div className="flex items-center space-x-2 flex-shrink-0">
-                                    <img src="/public/Group 449.png" alt="Icon" className="h-5 w-5 object-contain" />
+                                    <img src="https://i.ibb.co/mWZJT2m/Group-449.png" alt="Icon" className="h-5 w-5 object-contain" />
                                     <span className="text-blue-900 font-semibold text-lg whitespace-nowrap">Shipping Across India</span>
                                 </div>
                                 <div className="flex items-center space-x-2 flex-shrink-0">
-                                    <img src="/public/Group 449.png" alt="Icon" className="h-5 w-5 object-contain" />
+                                    <img src="https://i.ibb.co/mWZJT2m/Group-449.png" alt="Icon" className="h-5 w-5 object-contain" />
                                     <span className="text-blue-900 font-semibold text-lg whitespace-nowrap">Fast Installation</span>
                                 </div>
                                 <div className="flex items-center space-x-2 flex-shrink-0">
-                                    <img src="/public/Group 449.png" alt="Icon" className="h-5 w-5 object-contain" />
+                                    <img src="https://i.ibb.co/mWZJT2m/Group-449.png" alt="Icon" className="h-5 w-5 object-contain" />
                                     <span className="text-blue-900 font-semibold text-lg whitespace-nowrap">Customer Support</span>
                                 </div>
                             </React.Fragment>
@@ -38,19 +38,19 @@ const CurvedSection = () => {
                 <div className="sm:hidden">
                     <div className="flex items-center space-x-6 px-4 py-4 overflow-x-auto scrollbar-hide">
                         <div className="flex items-center space-x-2 flex-shrink-0">
-                            <img src="/public/Group 449.png" alt="Quality Icon" className="h-5 w-5 object-contain" />
+                            <img src="https://i.ibb.co/mWZJT2m/Group-449.png" alt="Quality Icon" className="h-5 w-5 object-contain" />
                             <span className="text-blue-900 font-semibold text-sm whitespace-nowrap">Quality Product</span>
                         </div>
                         <div className="flex items-center space-x-2 flex-shrink-0">
-                            <img src="/public/Group 449.png" alt="Shipping Icon" className="h-5 w-5 object-contain" />
+                            <img src="https://i.ibb.co/mWZJT2m/Group-449.png" alt="Shipping Icon" className="h-5 w-5 object-contain" />
                             <span className="text-blue-900 font-semibold text-sm whitespace-nowrap">Shipping Across India</span>
                         </div>
                         <div className="flex items-center space-x-2 flex-shrink-0">
-                            <img src="/public/Group 449.png" alt="Fast Icon" className="h-5 w-5 object-contain" />
+                            <img src="https://i.ibb.co/mWZJT2m/Group-449.png" alt="Fast Icon" className="h-5 w-5 object-contain" />
                             <span className="text-blue-900 font-semibold text-sm whitespace-nowrap">Fast Installation</span>
                         </div>
                         <div className="flex items-center space-x-2 flex-shrink-0">
-                            <img src="/public/Group 449.png" alt="Support Icon" className="h-5 w-5 object-contain" />
+                            <img src="https://i.ibb.co/mWZJT2m/Group-449.png" alt="Support Icon" className="h-5 w-5 object-contain" />
                             <span className="text-blue-900 font-semibold text-sm whitespace-nowrap">Customer Support</span>
                         </div>
                     </div>
